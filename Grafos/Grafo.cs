@@ -34,7 +34,7 @@ namespace Grafos
             }
             else
             {
-                Console.WriteLine("Error: indice fuera de rango");
+                Console.WriteLine("indice fuera de rango");
             }
         }
 
