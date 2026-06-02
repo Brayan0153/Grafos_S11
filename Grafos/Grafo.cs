@@ -8,29 +8,29 @@ namespace Grafos
 {
     internal class Grafo
     {
-        private int[,] matriz;
+        private int[,] matrizbi;
         private int n;
         private Random rand = new Random();
 
 
-        public Grafo(int vertices)
+        public Grafo(int v)
         {
-            n = vertices;
-            matriz = new int[n, n];
+            n = v;
+            matrizbi = new int[n, n];
 
 
             for (int f = 0; f < n; f++)
                 for (int c = 0; c < n; c++)
-                    matriz[f, c] = 0;
+                    matrizbi[f, c] = 0;
         }
 
 
-        public void Agregar(int origen, int destino)
+        public void Agregar(int ori, int des)
         {
-            if (origen >= 0 && origen < n && destino >= 0 && destino < n)
+            if (ori >= 0 && ori < n && des >= 0 && des < n)
             {
-                matriz[origen, destino] = 1;
-                matriz[destino, origen] = 1;
+                matrizbi[ori, des] = 1;
+                matrizbi[des, ori] = 1;
             }
            
         }
@@ -44,7 +44,7 @@ namespace Grafos
             {
                 for (int c = 0; c < n; c++)
                 {
-                    Console.Write(matriz[f, c] + " ");
+                    Console.Write(matrizbi[f, c] + " ");
                 }
                 Console.WriteLine();
             }
