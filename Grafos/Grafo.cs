@@ -32,10 +32,7 @@ namespace Grafos
                 matriz[origen, destino] = 1;
                 matriz[destino, origen] = 1;
             }
-            else
-            {
-                Console.WriteLine("indice fuera de rango");
-            }
+           
         }
 
 
